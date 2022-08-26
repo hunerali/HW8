@@ -1,15 +1,12 @@
 package Abstracts;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Family {
     private Human mother;
     private Human father;
     private List<Human> children;
-    private Pet pet;
+    private Set<Pet> pet;
 
     public Family(Human mother, Human father) {
         this.mother = mother;
@@ -38,27 +35,6 @@ public class Family {
         return 2 + getChildren().size();
     }
 
-
-    public void describePet() {
-        String slyLevel = "";
-        if (getPet().getTrickLevel() >= 50) {
-            slyLevel = "he is very sly";
-        } else {
-            slyLevel = "almost not sly";
-        }
-        System.out.println("I have a " + getPet().getSpecies() + ", he is " + getPet().getAge() + " years old, " + slyLevel);
-    }
-
-
-    public void feedPet(boolean feedTime) {
-        if (feedTime) {
-            System.out.println("Hm... I will feed " + getPet().getNickName());
-        } else {
-            System.out.println("I think " + getPet().getNickName() + " is not hungry.");
-        }
-    }
-
-
     public Human getMother() {
         return mother;
     }
@@ -83,11 +59,11 @@ public class Family {
         this.children = children;
     }
 
-    public Pet getPet() {
+    public Set<Pet> getPet() {
         return pet;
     }
 
-    public void setPet(Pet pet) {
+    public void setPet(Set<Pet> pet ) {
         this.pet = pet;
     }
 

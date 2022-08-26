@@ -1,7 +1,6 @@
 package Abstracts;
 
 
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.Set;
 
@@ -16,11 +15,11 @@ public abstract class Pet { private Species species;
     }
 
     public Pet(String nickName) {
-        this.setSpecies(Species.Unknown);
+        this.setSpecies(Species.UNKNOWN);
         this.setNickName(nickName);
     }
     public Pet(  String nickName, int age, int trickLevel, Set<String> habits) {
-        this.setSpecies(Species.Unknown);
+        this.setSpecies(Species.UNKNOWN);
         this.setNickName(nickName);
         this.setAge(age);
         this.setTrickLevel(trickLevel);

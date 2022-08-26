@@ -6,8 +6,8 @@ public enum Species {
     BIRD,
     SPIDER,
     FISH,
-    DomesticCat,
-    RoboCat,
-    Unknown;
+    DOMESTICCAT,
+    ROBOCAT,
+    UNKNOWN;
 
 }
